@@ -1,0 +1,331 @@
+*{
+	margin:0;
+	padding:0;
+}
+.container{
+	display: flex;
+	width: 100%;
+	height: 200px;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(45deg,#02f0fa 20%,#4facfe 50%,#55f83f 80%) ;
+	color: #333333;
+	padding: 10px 10px;
+	transition: .5s;
+}
+.container h1{
+	font-size: 100px;
+    position: relative;
+
+}
+.container h1::before{
+	content: '建党100周年';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	color: transparent;
+	background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0501%252Ff350159aj00qsf0x5000cc000u000k0c.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623057725&t=65127c8a574cec594eafab525f631b7a);
+    background-clip: text;
+    -webkit-background-clip:text;
+    clip-path: circle(30% at 0% 50%);
+    animation: move 8s infinite linear;
+
+
+}
+@keyframes move{
+	0%{
+		clip-path: circle(30% at 0% 50%);
+	}
+	50%{
+		clip-path: circle(30% at 100% 50%);
+	}
+	100%{
+		clip-path: circle(30% at 0% 50%);
+	}
+}
+.content{
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.2);
+	display: flex;
+	justify-content: center;
+	align-items:center; 
+}
+.container2{
+	padding: 10px;
+	padding-top: 0;
+	width: 100%;
+	height: 8000px;
+	background: linear-gradient(45deg,#0db1da,#99f437,#0ca6ee,#0dda5f);
+}
+.content2{
+	display: block;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background:linear-gradient(79.2deg,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.2) 50%);
+
+}
+.content2::before{
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background:linear-gradient(-79.2deg,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.1) 50%);
+}
+.nav{
+    height: 80px;    
+}
+.nav li{
+	float: left;
+	list-style: none;
+	margin: 40px 40px;
+
+   
+}
+.nav a{
+	text-decoration: none;
+	/*display: block;
+    height: 70px;
+       line-height: 80px;*/
+    padding: 0 10px;
+    font-size: 18px;
+    color: #000000; 
+
+}
+.box{
+	margin-top:100px;
+	width: 1252px;
+	height: 590px;
+	position: relative;
+}
+.smallBox{
+	position: relative;
+	width: 1252px;
+	height: 590px;
+	list-style: none;
+	padding-left: 0;
+	
+	
+}
+.item{
+	width: 100%;
+	height: 100%;
+	color: white;
+	opacity: 0;
+	transition: all .6s;
+	font-size: 50px;
+	position: absolute;
+}
+.item:nth-child(1){
+	background-image: url(img/轮播图2.png);
+}
+.item:nth-child(2){
+	background-image: url(img/轮播图4.png);
+}
+.item:nth-child(3){
+	background-image: url(img/轮播图3.png);
+}
+.item:nth-child(4){
+	background-image: url(img/轮播图5.png);
+}
+.item:nth-child(5){
+	background-image: url(img/轮播图1.png);
+}
+.point{
+	position: absolute;
+	right: 538px;
+	bottom: 20px;
+	padding-left: 0;
+	list-style: none;
+	z-index: 1000;
+}
+.smallPoint{
+	float: left;
+	width: 10px;
+	height: 10px;
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 100%;
+    margin-right: 14px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgba(255,255,255,0.6);
+	cursor: pointer;
+}
+.smallPoint.active{
+	background-color: rgba(255,255,255,0.5);
+}
+.btn{
+	width: 50px;
+	height: 100px;
+	position: absolute;
+	top: 240px;
+	z-index: 100;
+
+}
+#back{
+	left: 0;
+}
+#next{
+	right: 0;
+}
+.item.active{
+	z-index: 10;
+	opacity: 1;
+}
+.custom-btn {
+	 font-size: 18px;
+    color: #000000; 
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+}
+.btn-3 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: white;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+.btn-3 button{
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container3{
+	position: relative;
+	border-radius: 5%;
+	padding:20px 20px;
+	margin-top: 100px;
+	width: 1000px;
+	height:1600px;
+	z-index: 1;
+}
+.container3::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+    background-image:linear-gradient(45deg,#49efdd,#49ef93,#0bc8f1,#49efdd);
+    z-index: -2;
+    filter: blur(30px);
+    background-size: 400%;
+    border-radius: 5%;
+    animation: sun 8s linear infinite;
+}
+.container3::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	border-radius: 5%;
+    background-image:linear-gradient(45deg,#49efdd,#49ef93,#0bc8f1,#49efdd);
+    background-size: 400%;
+    z-index: -1;
+    animation: sun 8s linear infinite;
+}
+@keyframes sun{
+	100%{
+		background-position: -400% 400%;
+	}
+
+}
+
+.content3{
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+	text-shadow: inset 2px 2px 0px white;
+	border-radius: 5%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+
